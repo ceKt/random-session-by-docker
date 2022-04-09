@@ -26,9 +26,10 @@ server {
 }
 ```
 
-### 作成したら一度再起動
+### 作成したら再構築して再起動
 ```
-$ docker-compose restart
+$ docker-compose build web
+$ docker-compose up -d
 ```
 
 ### もしlocalhostにアクセスしてもエラーが出た場合
@@ -36,6 +37,3 @@ laravelプロジェクト内のstorageフォルダ配下に権限を付与する
 ```
 $ docker-compose exec app chmod -R 777 *プロジェクト名*/storage
 ```
-
-
-
